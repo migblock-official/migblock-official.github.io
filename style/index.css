@@ -1,0 +1,56 @@
+@font-face { font-family: ubuntu-b; src: url('../fonts/Ubuntu-B.ttf'); }
+@font-face { font-family: ubuntu-r; src: url('../fonts/Ubuntu-R.ttf'); }
+
+.main {
+    width: 100vw;
+    height: 1024px;
+        display: flex;
+        flex-flow: wrap;
+            background-image: url('../images/StoneTileDark.png');
+            background-repeat: repeat;
+            background-size: 32px;
+}
+.main-first {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.main-first-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: White;
+}
+.main-first-paragraph {
+    font-family: ubuntu-r;
+    color: White;
+}
+
+.main-second {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.main-second-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: White;
+}
+.main-second-paragraph {
+    font-family: ubuntu-r;
+    color: White;
+}
+
+.main-third {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.main-third-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: White;
+}
+.main-third-paragraph {
+    font-family: ubuntu-r;
+    color: White;
+}

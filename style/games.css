@@ -1,0 +1,70 @@
+@font-face { font-family: ubuntu-b; src: url('../fonts/Ubuntu-B.ttf'); }
+@font-face { font-family: ubuntu-r; src: url('../fonts/Ubuntu-R.ttf'); }
+
+.main {
+    width: 100vw;
+    height: 688px;
+        display: flex;
+        flex-flow: wrap;
+            background-image: url('../images/StoneTileDark.png');
+            background-repeat: repeat;
+            background-size: 32px;
+}
+
+.migcraft {
+    display: flex;
+    margin: 0px 32px 0px;
+}
+.migcraft-info {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.migcraft-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: white;
+}
+.migcraft-paragraph {
+    font-family: ubuntu-r;
+    color: white;
+}
+
+.migblock {
+    display: flex;
+    margin: 0px 32px 0px;
+}
+.migblock-info {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.migblock-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: white;
+}
+.migblock-paragraph {
+    font-family: ubuntu-r;
+    color: white;
+}
+
+
+.migtest {
+    display: flex;
+    margin: 0px 32px 0px;
+}
+.migtest-info {
+    width: 60vw;
+    height: 256px;
+    margin: 0px 32px 8px;
+}
+.migtest-title {
+    font-family: ubuntu-b;
+    font-size: 24px;
+    color: white;
+}
+.migtest-paragraph {
+    font-family: ubuntu-r;
+    color: white;
+}
