@@ -1,67 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Migblock</title>
-        <link rel="icon" type="image/png" href="favicon.png"/>
-        <link rel="stylesheet" style="text/css" href="style/common.css"/>
-        <link rel="stylesheet" style="text/css" href="style/donate.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Donate — Migblock</title>
+
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <link rel="stylesheet" href="/style/donate.css">
     </head>
     <body>
-        <div class="background">
-            <div class="logo">
-                <div class="logo-shade">
-                    <img src="images/MigblockLogoGreyThin.png" width="384" height="63.5"/>
-                </div>
-            </div>
-            <div class="menu">
-                <a style="text-decoration:none" href="/">
-                    <p id="button-home" class="menu-button">HOME</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="download.html">
-                    <p id="button-games" class="menu-button">DOWNLOAD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="news.html">
-                    <p id="button-games" class="menu-button">NEWS</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="https://discord.migblock.net" target="_blank">
-                    <p id="button-discord" class="menu-button">DISCORD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="donate.html">
-                    <p id="button-store" class="menu-button">DONATE</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="help.html">
-                    <p id="button-help" class="menu-button">HELP</p>
-                </a>
-            </div>
-            <div class="title-logo">
-                <!-- <img src="images/MigblockLogoGrey.png" width="768" height="277.5"/> -->
-            </div>
-            <div class="main">
-                <div class="main-first">
-                    <p class="main-first-title">Donations</P>
-                    <p class="main-first-paragraph">
-                        We appreciate all the love and support from our community, it means the world to us as a Team that people enjoy our Game.
-                        <br>
-                        <br>Even though we enjoy the process of making Games, it brings us more joy to see other people having fun once we've released them.
-                        <br>
-                        <br>If you wish to donate, for the moment you can do so on our Itch.io page: <a style="color:#328ffc" href="https://migblock-team.itch.io/" target="_blank">https://migblock-team.itch.io/</a>
-                        <br>
-                        <br>Though keep in mind that just being a member of our community is enough of a donation in our view.
-                        
-                        
-                <br><img src="images/angel.png" width="206" height="206" alt="Angel">
+        <nav>
+            <a href="/" class="logo">
+                <img
+                    src="images/MigblockLogoGreyThin.png"
+                    alt="Migblock"
+                >
+            </a>
 
-                        <br><br><br><a style="text-decoration:none;color:#328ffc" href="https://discord.migblock.net/">Join the Community!</a>
+            <div class="nav-links">
+                <a href="/">
+                    HOME
+                </a>
 
-                        <br><br><a style="text-decoration:none;color:#328ffc" href="/">Return Home</a>
-                    </p>
-                </div>
+                <a href="download.html">
+                    DOWNLOAD
+                </a>
+
+                <a href="news.html">
+                    NEWS
+                </a>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    DISCORD
+                </a>
+
+                <a href="donate.html" class="active">
+                    DONATE
+                </a>
+
+                <a href="help.html">
+                    HELP
+                </a>
             </div>
-        </div>
+        </nav>
+        <main>
+            <section class="section">
+                <div class="section-heading">
+                    <div class="label">
+                        SUPPORT MIGBLOCK
+                    </div>
+
+                    <h2>
+                        Donations
+                    </h2>
+                </div>
+                <div class="donate-grid">
+                    <article class="donate-card donate-card-main">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="card-icon">
+                                ✦
+                            </div>
+
+                            <h3>
+                                Donations
+                            </h3>
+
+                            <p>
+                                We appreciate all the love and support from our community,
+                                it means the world to us as a Team that people enjoy our Game.
+                            </p>
+
+                            <p>
+                                Even though we enjoy the process of making Games,
+                                it brings us more joy to see other people having fun once we've released them.
+                            </p>
+
+                            <p>
+                                If you wish to support us financially,
+                                for the moment you can do so on our Itch.io page.
+                            </p>
+
+                            <a
+                                href="https://migblock-team.itch.io/"
+                                target="_blank"
+                                rel="noopener"
+                                class="button button-primary"
+                            >
+                                SUPPORT US ON ITCH.IO
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="donate-card community-card">
+                        <div class="card-content">
+                            <div class="card-icon cyan">
+                                ♡
+                            </div>
+
+                            <h3>
+                                You're all we need.
+                            </h3>
+
+                            <p>
+                                While donations are appreciated,
+                                they’re certainly not why we make Migblock.
+                            </p>
+
+                            <p>
+                                Simply being a part of our Community is enough of a donation in our view,
+                                since the Game wouldn’t be possible without your love and support -
+                                we’d rather you leave us feedback than a donation.
+                            </p>
+
+                        </div>
+                    </article>
+
+                    <img
+                        src="images/angel.png"
+                        width="206"
+                        height="206"
+                        alt="Angel"
+                        class="angel"
+                    >
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div>
+                MIGBLOCK 2026
+            </div>
+            <div class="footer-links">
+
+                <a href="news.html">
+                    News
+                </a>
+
+                <span>·</span>
+
+                <a
+                    href="https://youtube.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    YouTube
+                </a>
+
+                <span>·</span>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Discord
+                </a>
+
+                <span>·</span>
+
+                <a href="donate.html">
+                    Donate
+                </a>
+            </div>
+        </footer>
     </body>
 </html>

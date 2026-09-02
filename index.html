@@ -1,97 +1,358 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Migblock</title>
-        <link rel="icon" type="image/png" href="favicon.png"/>
-        <link rel="stylesheet" style="text/css" href="style/common.css"/>
-        <link rel="stylesheet" style="text/css" href="style/index.css"/>
+
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <link rel="stylesheet" href="/style/index.css">
     </head>
     <body>
-        <div class="background">
-            <div class="logo">
-                <div class="logo-shade">
-                    <img src="images/MigblockLogoGreyThin.png" width="384" height="63.5"/>
+        <nav>
+            <a href="/" class="logo">
+                <img
+                    src="images/MigblockLogoGreyThin.png"
+                    alt="Migblock"
+                >
+            </a>
+            <div class="nav-links">
+                <a href="/" class="download">
+                    HOME
+                </a>
+
+                <a href="download.html">
+                    DOWNLOAD
+                </a>
+
+                <a href="news.html">NEWS</a>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    DISCORD
+                </a>
+
+                <a href="donate.html">DONATE</a>
+                <a href="help.html">HELP</a>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    In Development.
+                </div>
+                <h1>MIGBLOCK</h1>
+                <h2>
+                    An infinite Voxel Universel; A Solar Sandbox <br>
+                    - at your fingertips.
+                </h2>
+                <div class="hero-actions">
+                    <a
+                        href="download.html"
+                        class="button button-primary"
+                    >
+                        DOWNLOAD MIGBLOCK
+                    </a>
+                    <a
+                        href="https://discord.migblock.net/"
+                        target="_blank"
+                        rel="noopener"
+                        class="button button-secondary"
+                    >
+                        JOIN DISCORD
+                    </a>
                 </div>
             </div>
-            <div class="menu">
-                <a style="text-decoration:none" href="/">
-                    <p id="button-home" class="menu-button">HOME</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="download.html">
-                    <p id="button-games" class="menu-button">DOWNLOAD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="news.html">
-                    <p id="button-games" class="menu-button">NEWS</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="https://discord.migblock.net/" target="_blank">
-                    <p id="button-discord" class="menu-button">DISCORD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="donate.html">
-                    <p id="button-store" class="menu-button">DONATE</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="help.html">
-                    <p id="button-help" class="menu-button">HELP</p>
-                </a>
+        </header>
+        <main>
+        <section class="section intro">
+            <div class="label">
+                A NEW BEGINNING
             </div>
-            <div class="main">
-                <div class="main-first">
-                    <p class="main-first-title">What is Migblock?</P>
-                    <p class="main-first-paragraph">
-                        Simply put, Migblock is a passion project; An infinite Voxel Universe wherein which you can do just about anything your heart desires.
-                        <br>
-                        <br>Migblock features large worlds with near infinite build height, as well as depth, with the ability to create your own Voxel Starships to traverse an infinite Procedural Galaxy littered with all sorts of Procedural Planets. - and perhaps something a little spooky also.
-                        <br><img src="images/universe.jpg" width="682" height="216"/>
-                        <br><img src="images/starships-small.jpg" width="682" height="182"/>
-                        <br>
-                        <br>Realistic Item physics and a powerful dynamic lighting engine.
-                        <br><img src="images/items.jpg" width="682" height="182"/>
-                        <br><img src="images/lights.jpg" width="682" height="182"/>
-                        <br>
-                        <br>Custom wings and support for HD Player Skins. - So you can express yourself however you like.
-                        <br><img src="images/wings.jpg" width="682"/>
-                        <br>
-                        <br>There are lot's of minerals and such with the ability to create custom Tools.
-                        <br><img src="images/tools.jpg" width="682"/>
-                        <br>
-                        <br>The world is alive with a dynamic and simulated ecosystem.
-                        <br>Block updates will occur regardless of which Chunks are loaded.
-                        <br>- Seasons also roll across the world.
-                        <br><img src="images/seasons.jpg" width="682" height="182"/>
-                        <br>
-                        <br>With Multiplayer support you don't have to be so alone. 
-                        <br>The Server software is bundled with the Game, there's LAN support too.
-                        <br>We've also a public community server where all are welcome.
-                        <br>
-                        <br>Migblock is currently in early access. So not all of these things have found their way to the full release as yet. Some things might change or be improved, so nothing's set in stone. You've a chance now to join us on this adventure and help create the prefect Game. 
-                        <br>
-                        <br><br>Watch this space for updates!
-                        <br>
-                        
+
+            <h2>
+                We're re-building Migblock,
+                from the ground up.
+            </h2>
+
+            <p>
+                Instead of trying to build everything all at once,
+                we’re trying to build a simple Foundation,
+                that which we may build upon based on your Feedback.
+            </p>
+
+            <div class="ideas">
+                <article class="idea idea-sectors">
+
+                    <div class="idea-number">
+                        ♡ SECTORS ♡
+                    </div>
+
+                    <h3>
+                        Infinite Space
+                    </h3>
+
+                    <p>
+                        The In-Game Universe is divided into Sectors.
+                        Each Sector contains an entire Solar-System,
+                        littered with a multitude of Planets to explore.
+                    </p>
+                </article>
+
+                <article class="idea idea-worlds">
+
+                    <div class="idea-number">
+                        ♡ WORLDS ♡
+                    </div>
+
+                    <h3>
+                        Multiple Planets
+                    </h3>
+
+                    <p>
+                        Travel between Planets within a Sector.
+                        Cubic Gravity pulls you to the
+                        closest astral body.
+                    </p>
+                </article>
+
+                <article class="idea idea-multiplayer">
+
+                    <div class="idea-number">
+                        ♡ MULTIPLAYER ♡
+                    </div>
+
+                    <h3>
+                        Play Together
+                    </h3>
+
+                    <p>
+                        Each Sector enhabits it's own logical Simulation,
+                        allowing Servers to grow without one
+                        busy region becoming a bottleneck.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="section">
+            <div class="sector">
+                <div class="sector-image"></div>
+                <div class="sector-content">
+                    <div class="label">
+                        THE UNIVERSE
+                    </div>
+
+                    <h2>
+                        In Space "up"<br>
+                        is relative.
+                    </h2>
+
+                    <p>
+                        Every astral body exhibits it's own true Cubic Gravity.
+                        This Gravity is respected by all Systems,
+                        from Block orientation to Entity and Fluid simulations.
+                    </p>
+
+                    <div class="sector-list">
+                        <div>
+                            <span>●</span>
+                            High Player Counts
+                        </div>
+
+                        <div>
+                            <span>●</span>
+                            Persistent Simulations
+                        </div>
+
+                        <div>
+                            <span>●</span>
+                            Cubic Gravity
+                        </div>
+
+                        <div>
+                            <span>●</span>
+                            Infinite Sectors
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="label">
+                Development Roadmap
+            </div>
+            <h2 style="
+                margin:0;
+                font-family:'Space Grotesk',sans-serif;
+                font-size:clamp(40px,6vw,65px);
+                line-height:1;
+                letter-spacing:-0.05em;
+            ">
+                Start small,<br>
+                And continue improving.
+            </h2>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <div class="roadmap-status">
+                        .¸. • *¨ * •  ♡
+                    </div>
+
+                    <h3>
+                        Design Principals
+                    </h3>
+
+                    <p>
+                        Our Philosophy is simple: We're making a Game,
+                        and you may play it whilst we're making it.
                     </p>
                 </div>
-                <div class="main-second">
-                    <p class="main-second-title">How to get Started</P>
-                    <p class="main-second-paragraph">
-                        See our <a style="text-decoration:none;color:#328ffc" href="download.html" target="_blank">Downloads</a> page, and begin your journey in Migblock today.
-                        <br>
-                        <br>If you share our interest in this project, we encourage you to come say 'Hi!'.
-                        <br>You can meet the Team and community on <a style="text-decoration:none;color:#328ffc" href="https://discord.migblock.net/" target="_blank">Discord</a>, we'd love to have you!
-                        <br>
-                        <br>You can see our <a style="text-decoration:none;color:#328ffc" href="https://youtube.migblock.net/" target="_blank">Youtube Channel</a> for trailers, tutorials, sneak-peaks, developer stuffs and more!
-                        <br>
+                <div class="roadmap-item">
+
+                    <div class="roadmap-status">
+                        * •  ♡
+                    </div>
+
+                    <h3>
+                        Your Feedback
+                    </h3>
+
+                    <p>
+                        We truly value suggestions from our Players.
+                        To us, it is what makes Migblock so wonderful,
+                        and is also our reason for making it.
                     </p>
                 </div>
-                <div class="main-third">
-                    <p class="main-third-title"></P>
-                    <p class="main-third-paragraph">
+                <div class="roadmap-item">
+                    <div class="roadmap-status">
+                        • * ¨* • .¸.
+                    </div>
+
+                    <h3>
+                        Expand
+                    </h3>
+
+                    <p>
+                        We’ve many ideas, and we’re sure that you do too!
+                        So we’ll continue for as long as time permits.
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
+
+
+        <section class="community">
+
+            <div class="label">
+                COME ALONG FOR THE RIDE
+            </div>
+
+            <h2>
+                Build Migblock<br>
+                with us.
+            </h2>
+
+            <p>
+                Migblock is a passion project, and this new beginning
+                is just the start. Join the community for development sneak-peaks
+                and to help us build the perfect Game.
+            </p>
+
+            <a
+                href="https://discord.migblock.net/"
+                target="_blank"
+                rel="noopener"
+                class="button button-primary"
+            >
+                JOIN THE DISCORD
+            </a>
+
+        </section>
+
+
+        <section
+            class="section"
+            style="text-align:center;"
+        >
+
+            <div class="label">
+                READY TO PLAY?
+            </div>
+
+            <h2 style="
+                margin:0;
+                font-family:'Space Grotesk',sans-serif;
+                font-size:clamp(40px,6vw,65px);
+                line-height:1;
+                letter-spacing:-0.05em;
+            ">
+                A new Universe<br>
+                starts here.
+            </h2>
+
+            <p style="
+                max-width:550px;
+                margin:20px auto 30px;
+                color:var(--muted);
+            ">
+                Download Migblock today,
+                and start giving us feedback!
+            </p>
+
+            <a
+                href="download.html"
+                class="button button-primary"
+            >
+                DOWNLOAD MIGBLOCK
+            </a>
+        </section>
+
+        </main>
+        <footer>
+            <div>
+                MIGBLOCK 2026
+            </div>
+            <div style="margin-top:8px;">
+                <a href="news.html">News</a>
+
+                &nbsp; · &nbsp;
+
+                <a
+                    href="https://youtube.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    YouTube
+                </a>
+
+                &nbsp; · &nbsp;
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Discord
+                </a>
+
+                &nbsp; · &nbsp;
+
+                <a href="donate.html">Donate</a>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,0 +1,1100 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Migblock — Build Beyond Worlds</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #070b12;
+            --bg-light: #0d1420;
+            --panel: rgba(16, 24, 36, 0.72);
+            --panel-solid: #101925;
+
+            --text: #f1f6ff;
+            --muted: #91a0b5;
+
+            --blue: #328ffc;
+            --blue-bright: #5ba8ff;
+            --cyan: #55e6ff;
+            --purple: #8c6cff;
+
+            --border: rgba(255,255,255,0.09);
+            --shadow: 0 20px 60px rgba(0,0,0,0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 20% 0%, rgba(50,143,252,0.13), transparent 32%),
+                radial-gradient(circle at 85% 15%, rgba(140,108,255,0.12), transparent 30%),
+                var(--bg);
+            font-family: "Inter", sans-serif;
+            line-height: 1.7;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.16;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(to bottom, black, transparent 85%);
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* ---------------- NAV ---------------- */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 5vw;
+
+            background: rgba(7, 11, 18, 0.72);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            width: 190px;
+            height: auto;
+            opacity: 0.95;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            padding: 9px 15px;
+            border-radius: 8px;
+
+            color: #aab7c9;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .nav-links .nav-download {
+            color: white;
+            background: linear-gradient(135deg, #328ffc, #246dcc);
+            box-shadow: 0 8px 25px rgba(50,143,252,0.2);
+        }
+
+        .nav-links .nav-download:hover {
+            background: linear-gradient(135deg, #5ba8ff, #328ffc);
+            transform: translateY(-1px);
+        }
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            position: relative;
+            min-height: 780px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 150px 20px 100px;
+            overflow: hidden;
+
+            background:
+                linear-gradient(to bottom, rgba(7,11,18,0.2), var(--bg)),
+                linear-gradient(to right, rgba(7,11,18,0.9), rgba(7,11,18,0.35)),
+                url("images/universe.jpg") center/cover no-repeat;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(circle at 50% 40%, rgba(50,143,252,0.18), transparent 30%),
+                linear-gradient(to bottom, transparent 55%, var(--bg) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: min(1000px, 100%);
+            text-align: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 7px 13px;
+            margin-bottom: 24px;
+
+            color: #a9d4ff;
+            background: rgba(50,143,252,0.09);
+            border: 1px solid rgba(50,143,252,0.25);
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .eyebrow-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #48e29a;
+            box-shadow: 0 0 12px #48e29a;
+        }
+
+        .hero h1 {
+            margin: 0;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(58px, 9vw, 112px);
+            line-height: 0.9;
+            letter-spacing: -0.065em;
+
+            background: linear-gradient(
+                135deg,
+                #ffffff 15%,
+                #b9d9ff 50%,
+                #5ba8ff 85%
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            text-shadow: 0 15px 60px rgba(50,143,252,0.15);
+        }
+
+        .hero h2 {
+            margin: 26px auto 0;
+
+            max-width: 700px;
+
+            color: #c3cfdf;
+            font-size: clamp(18px, 2.2vw, 25px);
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+
+            margin-top: 38px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            min-width: 170px;
+            padding: 14px 22px;
+
+            border-radius: 10px;
+
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+
+            transition: 0.25s ease;
+        }
+
+        .button-primary {
+            color: white;
+            background: linear-gradient(135deg, #328ffc, #246dcc);
+            box-shadow: 0 12px 35px rgba(50,143,252,0.28);
+        }
+
+        .button-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 45px rgba(50,143,252,0.4);
+        }
+
+        .button-secondary {
+            color: #dce8f7;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+        }
+
+        .button-secondary:hover {
+            background: rgba(255,255,255,0.09);
+            transform: translateY(-3px);
+        }
+
+        .scroll-hint {
+            position: absolute;
+            bottom: 35px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            color: #68778c;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        /* ---------------- MAIN ---------------- */
+
+        .container {
+            width: min(1120px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-label {
+            margin-bottom: 12px;
+
+            color: var(--blue-bright);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 15px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        /* ---------------- FEATURES ---------------- */
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .feature-card {
+            position: relative;
+            min-height: 230px;
+            padding: 28px;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(145deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+                var(--panel);
+
+            border: 1px solid var(--border);
+            border-radius: 16px;
+
+            box-shadow: var(--shadow);
+
+            transition: 0.3s ease;
+        }
+
+        .feature-card::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: -70px;
+            bottom: -70px;
+
+            background: var(--blue);
+            opacity: 0.08;
+            filter: blur(30px);
+            border-radius: 50%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(50,143,252,0.35);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 20px;
+
+            color: #79baff;
+            background: rgba(50,143,252,0.1);
+            border: 1px solid rgba(50,143,252,0.2);
+            border-radius: 10px;
+
+            font-size: 21px;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 8px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ---------------- SHOWCASE ---------------- */
+
+        .showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .showcase-card {
+            position: relative;
+            min-height: 310px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: 18px;
+
+            background: var(--panel-solid);
+            box-shadow: var(--shadow);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 310px;
+            object-fit: cover;
+
+            display: block;
+
+            opacity: 0.82;
+
+            transition: 0.5s ease;
+        }
+
+        .showcase-card:hover img {
+            transform: scale(1.04);
+            opacity: 0.95;
+        }
+
+        .showcase-overlay {
+            position: absolute;
+            inset: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            padding: 28px;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(5,9,15,0.95),
+                    rgba(5,9,15,0.2) 65%,
+                    transparent
+                );
+        }
+
+        .showcase-overlay h3 {
+            margin: 0 0 5px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 25px;
+        }
+
+        .showcase-overlay p {
+            margin: 0;
+            color: #aebacd;
+            font-size: 13px;
+        }
+
+        /* ---------------- BIG FEATURE ---------------- */
+
+        .big-feature {
+            position: relative;
+
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            min-height: 460px;
+
+            overflow: hidden;
+
+            border: 1px solid var(--border);
+            border-radius: 22px;
+
+            background:
+                radial-gradient(circle at 75% 50%, rgba(85,230,255,0.09), transparent 30%),
+                var(--panel-solid);
+
+            box-shadow: var(--shadow);
+        }
+
+        .big-feature-content {
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .big-feature-content h2 {
+            margin: 0 0 18px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(34px, 4vw, 55px);
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        .big-feature-content p {
+            color: var(--muted);
+            font-size: 15px;
+            max-width: 520px;
+        }
+
+        .big-feature-image {
+            min-height: 460px;
+
+            background:
+                linear-gradient(to right, var(--panel-solid), transparent 25%),
+                url("images/starships-small.jpg") center/cover no-repeat;
+        }
+
+        /* ---------------- COMMUNITY ---------------- */
+
+        .community {
+            text-align: center;
+            padding: 110px 20px;
+
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            background:
+                radial-gradient(circle at 50% 50%, rgba(50,143,252,0.11), transparent 45%);
+        }
+
+        .community h2 {
+            margin: 0 auto 15px;
+
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(35px, 5vw, 58px);
+            letter-spacing: -0.045em;
+        }
+
+        .community p {
+            max-width: 620px;
+            margin: 0 auto;
+
+            color: var(--muted);
+        }
+
+        .community-actions {
+            margin-top: 30px;
+        }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            padding: 40px 20px;
+
+            color: #68778c;
+            font-size: 12px;
+
+            text-align: center;
+        }
+
+        footer strong {
+            color: #a8b5c6;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 850px) {
+
+            .nav-links a:not(.nav-download) {
+                display: none;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .big-feature {
+                grid-template-columns: 1fr;
+            }
+
+            .big-feature-image {
+                min-height: 300px;
+                order: -1;
+            }
+
+            .big-feature-content {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .nav-logo img {
+                width: 145px;
+            }
+
+            .hero {
+                min-height: 700px;
+                padding-top: 130px;
+            }
+
+            .hero h1 {
+                font-size: 62px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                min-height: auto;
+            }
+
+            .big-feature-content {
+                padding: 30px;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .hero-actions {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a class="nav-logo" href="/">
+            <img src="images/MigblockLogoGreyThin.png" alt="Migblock">
+        </a>
+
+        <div class="nav-links">
+            <a href="/">HOME</a>
+            <a href="download.html" class="nav-download">DOWNLOAD</a>
+            <a href="news.html">NEWS</a>
+            <a href="https://discord.migblock.net/" target="_blank">DISCORD</a>
+            <a href="donate.html">DONATE</a>
+            <a href="help.html">HELP</a>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                Early Access
+            </div>
+
+            <h1>MIGBLOCK</h1>
+
+            <h2>
+                An infinite voxel universe where you build,
+                explore, create and discover.
+            </h2>
+
+            <div class="hero-actions">
+
+                <a href="download.html" class="button button-primary">
+                    ↓ &nbsp; DOWNLOAD MIGBLOCK
+                </a>
+
+                <a href="https://discord.migblock.net/" target="_blank" class="button button-secondary">
+                    JOIN THE COMMUNITY
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-hint">
+            Explore the universe ↓
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- INTRO -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Welcome to Migblock
+                    </div>
+
+                    <h2>
+                        Build without limits.
+                    </h2>
+
+                    <p>
+                        Migblock is a passion project built around one simple idea:
+                        give players a huge voxel universe and let them decide what
+                        to do with it.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">▦</div>
+
+                        <h3>Infinite Worlds</h3>
+
+                        <p>
+                            Explore enormous procedural worlds with incredible
+                            build height and depth.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">✦</div>
+
+                        <h3>Procedural Galaxy</h3>
+
+                        <p>
+                            Build your own voxel starship and travel between
+                            countless procedurally generated planets.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">◈</div>
+
+                        <h3>Dynamic Ecosystem</h3>
+
+                        <p>
+                            A living world with simulated ecosystems, seasons
+                            and block updates.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">⚙</div>
+
+                        <h3>Real Physics</h3>
+
+                        <p>
+                            Items interact with the world using realistic
+                            physics and a dynamic lighting system.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">⌁</div>
+
+                        <h3>Build Your Gear</h3>
+
+                        <p>
+                            Discover minerals and create your own custom tools
+                            to help you shape the world.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card">
+
+                        <div class="feature-icon">◎</div>
+
+                        <h3>Play Together</h3>
+
+                        <p>
+                            Multiplayer, LAN and dedicated server support let
+                            you bring friends into your universe.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCREENSHOTS -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Your Universe
+                    </div>
+
+                    <h2>
+                        There is always somewhere to go.
+                    </h2>
+
+                    <p>
+                        From building on a quiet world to travelling through
+                        the stars, Migblock is designed to keep your adventure moving.
+                    </p>
+
+                </div>
+
+
+                <div class="showcase">
+
+                    <div class="showcase-card">
+
+                        <img
+                            src="images/universe.jpg"
+                            alt="Migblock universe"
+                        >
+
+                        <div class="showcase-overlay">
+
+                            <h3>Explore Worlds</h3>
+
+                            <p>
+                                Vast procedural environments waiting to be discovered.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-card">
+
+                        <img
+                            src="images/starships-small.jpg"
+                            alt="Migblock starships"
+                        >
+
+                        <div class="showcase-overlay">
+
+                            <h3>Build Starships</h3>
+
+                            <p>
+                                Construct your own voxel spacecraft and leave the planet behind.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-card">
+
+                        <img
+                            src="images/seasons.jpg"
+                            alt="Migblock seasons"
+                        >
+
+                        <div class="showcase-overlay">
+
+                            <h3>A Living World</h3>
+
+                            <p>
+                                Seasons roll across the world as ecosystems continue to evolve.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="showcase-card">
+
+                        <img
+                            src="images/lights.jpg"
+                            alt="Migblock dynamic lighting"
+                        >
+
+                        <div class="showcase-overlay">
+
+                            <h3>Dynamic Lighting</h3>
+
+                            <p>
+                                Light, darkness and atmosphere transform the world around you.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CREATION -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="big-feature">
+
+                    <div class="big-feature-content">
+
+                        <div class="section-label">
+                            Beyond the Blocks
+                        </div>
+
+                        <h2>
+                            Build it.<br>
+                            Fly it.
+                        </h2>
+
+                        <p>
+                            Migblock isn't just about building another house.
+                            Create massive structures, design custom tools,
+                            construct voxel starships and venture into a
+                            procedural galaxy filled with unexplored worlds.
+                        </p>
+
+                        <div style="margin-top:25px;">
+                            <a href="download.html" class="button button-primary">
+                                START YOUR ADVENTURE →
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="big-feature-image"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMUNITY -->
+
+        <section class="community">
+
+            <div class="container">
+
+                <div class="section-label">
+                    The Migblock Community
+                </div>
+
+                <h2>
+                    Don't explore alone.
+                </h2>
+
+                <p>
+                    Migblock supports multiplayer and LAN play, and we've got
+                    a public community server where everyone is welcome.
+                    Meet the team, share your creations and help shape the game.
+                </p>
+
+                <div class="community-actions">
+
+                    <a
+                        href="https://discord.migblock.net/"
+                        target="_blank"
+                        class="button button-primary"
+                    >
+                        JOIN US ON DISCORD
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EARLY ACCESS -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Early Access
+                    </div>
+
+                    <h2>
+                        Help build the future of Migblock.
+                    </h2>
+
+                    <p>
+                        Migblock is still in early access. Features are being
+                        developed, improved and sometimes completely reworked.
+                        Nothing is set in stone.
+                    </p>
+
+                </div>
+
+                <a href="download.html" class="button button-primary">
+                    DOWNLOAD MIGBLOCK →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <strong>MIGBLOCK</strong>
+        &nbsp;·&nbsp;
+        A passion project built one block at a time.
+
+        <br><br>
+
+        <a href="https://youtube.migblock.net/" target="_blank"
+           style="color:#718198;text-decoration:none;">
+            YouTube
+        </a>
+
+        &nbsp;·&nbsp;
+
+        <a href="https://discord.migblock.net/" target="_blank"
+           style="color:#718198;text-decoration:none;">
+            Discord
+        </a>
+
+        &nbsp;·&nbsp;
+
+        <a href="donate.html"
+           style="color:#718198;text-decoration:none;">
+            Donate
+        </a>
+
+    </footer>
+
+</body>
+</html>
+```

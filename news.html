@@ -1,58 +1,300 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>Migblock</title>
-        <link rel="icon" type="image/png" href="favicon.png"/>
-        <link rel="stylesheet" style="text/css" href="style/common.css"/>
-        <link rel="stylesheet" style="text/css" href="style/news.css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>News — Migblock</title>
+
+        <link rel="icon" type="image/png" href="favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+            rel="stylesheet"
+        >
+
+        <link rel="stylesheet" href="/style/news.css">
     </head>
     <body>
-        <div class="background">
-            <div class="logo">
-                <div class="logo-shade">
-                    <img src="images/MigblockLogoGreyThin.png" width="384" height="63.5"/>
+        <nav>
+            <a href="/" class="logo">
+                <img
+                    src="images/MigblockLogoGreyThin.png"
+                    alt="Migblock"
+                >
+            </a>
+
+            <div class="nav-links">
+                <a href="/">
+                    HOME
+                </a>
+
+                <a href="download.html">
+                    DOWNLOAD
+                </a>
+
+                <a href="news.html" class="download">
+                    NEWS
+                </a>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    DISCORD
+                </a>
+
+                <a href="donate.html">
+                    DONATE
+                </a>
+
+                <a href="help.html">
+                    HELP
+                </a>
+            </div>
+        </nav>
+        <main>
+            <section class="section news-section">
+                <div class="section-heading">
+
+                    <div class="label">
+                        MIGBLOCK NEWS
+                    </div>
+
+                    <h2>
+                        What's happening<br>
+                        with Migblock?
+                    </h2>
+
                 </div>
-            </div>
-            <div class="menu">
-                <a style="text-decoration:none" href="/">
-                    <p id="button-home" class="menu-button">HOME</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="download.html">
-                    <p id="button-games" class="menu-button">DOWNLOAD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="news.html">
-                    <p id="button-games" class="menu-button">NEWS</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="https://discord.migblock.net" target="_blank">
-                    <p id="button-discord" class="menu-button">DISCORD</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="donate.html">
-                    <p id="button-store" class="menu-button">DONATE</p>
-                </a>
-                <div style="margin:12px"></div>
-                <a style="text-decoration:none" href="help.html">
-                    <p id="button-help" class="menu-button">HELP</p>
-                </a>
-            </div>
-            <p class="title">
-                News!
-            </p>
-            <div class="main">
                 <div class="news-feed">
-                    <p>
-                        <p class="date">31/10/2025:</p><p class="news-paragraph">
-                        <br>We're going to be soon releasing the Game to early access. We look forward to your feedback and bug reports!
-                        <br>
-                        <br>Join our Discord for more information: <a style="color:#328ffc" href="https://discord.migblock.net/" target="_blank">https://discord.migblock.net/</a>
-                        </p>
-                        <br><br><br><br>
-                    </p>
+
+                    <!-- AARTICLE TEMPLATE -->
+
+                    <!--
+                    <article class="news-card">
+
+                        <div class="news-meta">
+                            <span class="news-date">
+                                DD / MM / YYYY
+                            </span>
+
+                            <span class="news-status">
+                                DEVELOPMENT
+                            </span>
+                        </div>
+
+                        <div class="news-content">
+
+                            <h3>
+                                Your next update title.
+                            </h3>
+
+                            <p>
+                                Your news goes here.
+                            </p>
+
+                        </div>
+
+                    </article>
+                    -->
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                15 / 2 / 2026
+                            </span>
+
+                            <span class="news-status">
+                                DEVELOPMENT
+                            </span>
+                        </div>
+                        <div class="news-content">
+
+                            <h3>
+                                0.2.2 - Multiplayer & Optimizations
+                            </h3>
+
+                            <img src="https://img.itch.zone/aW1nLzI1NTY1Njc3LnBuZw==/500x/6nbsOQ.png"></img>
+
+                            <p>
+                                Just a small Hot-Fix / QoL -esc Patch!<br>
+                                <br>
+                                Please join our Discord if you'd like to share your thoughts
+                                <a
+                                    href="https://discord.gg/KShabrZgHq"
+                                    target="_blank"
+                                    rel="noopener"
+                                > https://discord.gg/KShabrZgHq </a>
+                            </p>
+
+                            <h3>Additions</h3>
+                            <ul>
+                                <li>
+                                    Add Controls-Info to Title-Screen.
+                                </li>
+                                <li>
+                                    Add Graphics-Setting adjustment with F5.
+                                </li>
+                                <li>
+                                    Add Multiplayer support to Standalone / Launcher-less Build.
+                                </li>
+                            </ul>
+
+                            <a
+                                href="https://discord.migblock.net/"
+                                target="_blank"
+                                rel="noopener"
+                                class="news-link"
+                            >
+                                JOIN OUR DISCORD
+                                <span>↗</span>
+                            </a>
+                            <a
+                                href="https://migblock-team.itch.io/migblock/devlog/1376803/022-multiplayer-optimizations"
+                                target="_blank"
+                                rel="noopener"
+                                class="news-link"
+                            >
+                                VIEW ON ITCH.IO
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <span class="news-date">
+                                14 / 2 / 2026
+                            </span>
+
+                            <span class="news-status">
+                                DEVELOPMENT
+                            </span>
+                        </div>
+                        <div class="news-content">
+
+                            <h3>
+                                Migblock Alpha (v0.0 – v0.2.1)
+                            </h3>
+
+                            <img src="https://img.itch.zone/aW1nLzI1NTQzNjI5LnBuZw==/x200/vT1nkb.png"></img>
+                            <img src="https://img.itch.zone/aW1nLzI1NTQzNjMzLnBuZw==/x200/ugqTOY.png"></img>
+
+                            <p>As of the 5th of February 2026,&nbsp;Migblock is open&nbsp;for Playtesting! ~ I know, finally!</p>
+                            <h2>The following is everything you need to know:</h2>
+                            <ul><li>We <em>are</em> starting from scratch, as we've a new vision for the Game. As such, you shall be able to see the Game grow immensely over the next few months.
+                            </li><li>We're going to release things as we make them, so the Game is going to change rather quickly.
+                            </li><li>We'll be hosting a Public Server where all are welcome, although you're quite welcome to host your own - we're happy to help with this if you need.
+                            </li></ul>
+                            <h2>This is where your Feedback is going to be crucial!</h2>
+                            <p>So please do let us know anything and everything that you think about the Game.&nbsp;Please try and break it and tell us what you think!</p>
+                            <p>Please&nbsp;join our Community, make suggestions and report bugs on&nbsp;Discord:&nbsp;<a href="https://discord.gg/KShabrZgHq" class="anchor_edefb8 anchorUnderlineOnHover_edefb8" rel="noreferrer noopener" target="_blank" title="https://discord.gg/KShabrZgHq" role="button" tabindex="0">https://discord.gg/KShabrZgHq</a></p>
+                            <p><br></p>
+                            <h2>Versions included in this Post:</h2>
+                            <p>Please keep in mind that these older versions do not support Multiplayer, and we shall be adding it's support in 0.2.2.</p>
+                            <ul><li><strong>0.0.0</strong><ul>
+                             <li>Proof of concept for the Cube Gravity and World Engine.</li>
+                             <li>Very simple breaking / placing. No World saving.</li>
+                            </ul></li>
+                            <li><strong>0.1.4</strong><ul>
+                             <li>Multiplayer,</li><li>World Saving / Loading.</li>
+                             <li>Loads of polish and improvements.</li></ul></li>
+                            <li><strong>0.2.1</strong><ul>
+                             <li>Player Usernames & in-Game-Chat.</li>
+                             <li>Screenshots, new Blocks.</li><li>Loads of bug-fixes and QoL things.</li>
+                            </ul></li>
+                            </ul>
+
+                            <a
+                                href="https://discord.migblock.net/"
+                                target="_blank"
+                                rel="noopener"
+                                class="news-link"
+                            >
+                                JOIN OUR DISCORD
+                                <span>↗</span>
+                            </a>
+                            <a
+                                href="https://migblock-team.itch.io/migblock/devlog/1372777/migblock-alpha-v00-v021"
+                                target="_blank"
+                                rel="noopener"
+                                class="news-link"
+                            >
+                                VIEW ON ITCH.IO
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+
                 </div>
+            </section>
+
+            <section class="community">
+                <div class="label">
+                    DON'T MISS AN UPDATE
+                </div>
+
+                <h2>
+                    That's all for now!
+                </h2>
+
+                <p>
+                    If you’d like to see sneak-peaks and such,
+                    or leave us any feedback,
+                    please be sure to join our Community on Discord!
+                </p>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                    class="button button-primary"
+                >
+                    JOIN THE DISCORD
+                </a>
+            </section>
+        </main>
+
+        <footer>
+            <div>
+                MIGBLOCK 2026
             </div>
-        </div>
+            <div class="footer-links">
+                <a href="news.html">
+                    News
+                </a>
+
+                <span>·</span>
+
+                <a
+                    href="https://youtube.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    YouTube
+                </a>
+
+                <span>·</span>
+
+                <a
+                    href="https://discord.migblock.net/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Discord
+                </a>
+
+                <span>·</span>
+
+                <a href="donate.html">
+                    Donate
+                </a>
+            </div>
+        </footer>
     </body>
 </html>
